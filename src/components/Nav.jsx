@@ -4,7 +4,7 @@ import { navLinks } from '../constants';
 
 function Nav() {
   return (
-    <header className='padding-x padding-y-8 absolute z-10 w-full'>
+    <header className=' max-lg:flex justify-between items-center padding-x py-8 z-10 w-full'>
         <nav className='flex justify-between items-center max-container'>
             <a href="/">
                 <img src={headerLogo} alt="Logo" width={130} height={29}/>
@@ -21,13 +21,12 @@ function Nav() {
                 </li>
                 ))}
             </ul>
-
-            <div className='hidden max-lg:block'>
+        </nav>
+        <div className='hidden max-lg:block fixed right-4   '>
                 <img src={hamburger} alt="Nav menu toggle" width={25} height={25}/>
 
                 {/* TODO: add functionality to the ham menu */}
-            </div>
-        </nav>
+        </div>
     </header>
   )
 }
